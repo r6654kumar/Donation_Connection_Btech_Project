@@ -18,7 +18,8 @@ module.exports = {
 
     },
     mumbai: {
-       url: `https://rpc-mumbai.maticvigil.com`,
+      //  url: `https://rpc-mumbai.maticvigil.com`,
+      url: `https://rpc2.sepolia.org`,
        accounts: [process.env.PRIVATE_KEY],
      }
   },

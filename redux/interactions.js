@@ -10,9 +10,9 @@ import {
 } from '../helper/helper';
 
 // const crowdFundingContractAddress =
-//   '0x9738E63D5add8571f1A52d88F2F922A945418632';
-const crowdFundingContractAddress =
-  '0x8e455d9ea4cb1c1dA8a8CD5f8AF25e7476e81A29';
+//   '0x8e455d9ea4cb1c1dA8a8CD5f8AF25e7476e81A29';
+  const crowdFundingContractAddress =
+  '0xc5d09C8a3Ce268451D5466564622aee077B97691';
 //Load web3
 export const loadWeb3 = async (dispatch) => {
   const web3 = new Web3(Web3.givenProvider || 'http://localhost:8545');

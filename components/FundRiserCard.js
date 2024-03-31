@@ -42,7 +42,7 @@ const FundRiserCard = ({props,pushWithdrawRequests}) => {
     const onSuccess = () =>{
       setBtnLoader(false)
       setAmount(0)
-      toastSuccess(`Successfully contributed ${amount} MATIC`)
+      toastSuccess(`Successfully contributed ${amount} SepoliaETH`)
     }
     const onError = (message) =>{
       setBtnLoader(false)
@@ -56,7 +56,7 @@ const FundRiserCard = ({props,pushWithdrawRequests}) => {
     const contributionAmount = etherToWei(amount);
 
     const data = {
-      description:`${amount} MATIC requested for withdraw`,
+      description:`${amount} SepoliaETH requested for withdraw`,
       amount:contributionAmount,
       recipient:account,
       account:account
@@ -67,7 +67,7 @@ const FundRiserCard = ({props,pushWithdrawRequests}) => {
       if(pushWithdrawRequests){
         pushWithdrawRequests(data)
       }
-      toastSuccess(`Successfully requested for withdraw ${amount} MATIC`)
+      toastSuccess(`Successfully requested for withdraw ${amount} SepoliaETH`)
     }
     const onError = (message) =>{
       setBtnLoader(false)
@@ -92,7 +92,7 @@ const FundRiserCard = ({props,pushWithdrawRequests}) => {
     <div className="flex flex-col lg:flex-row">
       <div className="inner-card my-6 w-full lg:w-2/5">
         <p className="text-md font-bold font-sans text-gray">Targeted contribution</p>
-        <p className="text-sm font-bold font-sans text-gray-600 ">{props.goalAmount} MATIC </p>
+        <p className="text-sm font-bold font-sans text-gray-600 ">{props.goalAmount} SepoliaETH </p>
         <p className="text-md font-bold font-sans text-gray">Deadline</p>
         <p className="text-sm font-bold font-sans text-gray-600 ">{props.deadline}</p>
       </div>
@@ -112,13 +112,13 @@ const FundRiserCard = ({props,pushWithdrawRequests}) => {
               </button>
     
             </div>
-            <p className="text-sm text-red-600"> <span className="font-bold">NOTE : </span> Minimum contribution is {props.minContribution} MATIC </p>
+            <p className="text-sm text-red-600"> <span className="font-bold">NOTE : </span> Minimum contribution is {props.minContribution} SepoliaETH </p>
 
           </>
           :
           <>
             <p className="text-md font-bold font-sans text-gray">Contract balance</p>
-            <p className="text-sm font-bold font-sans text-gray-600 ">{props.contractBalance} MATIC </p>
+            <p className="text-sm font-bold font-sans text-gray-600 ">{props.contractBalance} SepoliaETH </p>
 
             {
               props.creator === account?
